@@ -37,8 +37,8 @@ jobs:
 
         - name: Zip build folder
           run: |
-            zip -r build.zip build/
-          shell: bash
+            zip -r build.zip build
+          # shell: bash
 
         # - name: Upload build artifact
         #   uses: actions/upload-artifact@v2
