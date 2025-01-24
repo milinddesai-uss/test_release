@@ -1,0 +1,9 @@
+{
+    "branches": [
+        {
+            "branch": "main",
+            "release-type": "node"
+        }
+    ],
+    "release-label": "release-please"
+}
