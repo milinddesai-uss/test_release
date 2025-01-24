@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/milinddesai-uss/test_release/compare/v1.1.0...v1.2.0) (2025-01-24)
+
+
+### Features
+
+* Remove Token and use default token ([bbf9170](https://github.com/milinddesai-uss/test_release/commit/bbf91709ccba37e5d5ddae823f3b18eb3119c8ac))
+
+
+### Bug Fixes
+
+* get path changes ([f56b307](https://github.com/milinddesai-uss/test_release/commit/f56b3079278c8526b9f6506c1ec0032c9e344304))
+
 ## [1.1.0](https://github.com/milinddesai-uss/test_release/compare/v1.0.0...v1.1.0) (2025-01-24)
 
 
