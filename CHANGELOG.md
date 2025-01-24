@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.4.0](https://github.com/milinddesai-uss/test_release/compare/v1.3.0...v1.4.0) (2025-01-24)
+
+
+### Features
+
+* change release type to node ([2e5c0bd](https://github.com/milinddesai-uss/test_release/commit/2e5c0bda675c7e1cc721131d89d9c7a6270da849))
+* comment default token ([9ed93b6](https://github.com/milinddesai-uss/test_release/commit/9ed93b6769b01859421f90138bb8a48691c18e9a))
+* fix and revert to initial ([d3b052f](https://github.com/milinddesai-uss/test_release/commit/d3b052f676ce1040967851d29d2026f98076356e))
+* more changes ([dddc708](https://github.com/milinddesai-uss/test_release/commit/dddc708f68dff4a5a5462c0f28bdddb2177c9c98))
+* More changes ([5db7544](https://github.com/milinddesai-uss/test_release/commit/5db7544ebe77372302caa3dc0d8b8e710a714062))
+* release please output and upload artifact ([aae4b64](https://github.com/milinddesai-uss/test_release/commit/aae4b64fc32123ed7282d6b686ae65f128448e7b))
+* remove actions ([1a0c0cd](https://github.com/milinddesai-uss/test_release/commit/1a0c0cdf131b4a4bd59d8119dc9b43e49fdda027))
+
+
+### Bug Fixes
+
+* change config to original ([5b4c1ae](https://github.com/milinddesai-uss/test_release/commit/5b4c1ae579814be97568ef34d460bf1d3823b9a2))
+* remove path ([561bf09](https://github.com/milinddesai-uss/test_release/commit/561bf095ad2ff976d5c3cde7ecec2a693cf0c223))
+* reset to what works ([54a9454](https://github.com/milinddesai-uss/test_release/commit/54a9454b3494537b2e2e6639f486528e2fbf1345))
+* update folder ([aaa007b](https://github.com/milinddesai-uss/test_release/commit/aaa007b6c1796fe227dec82186b9f38cc3d3b867))
+* update release manually ([8a05956](https://github.com/milinddesai-uss/test_release/commit/8a0595640529600e25979f01a6f46f64cffbd832))
+
 ## [1.3.0](https://github.com/milinddesai-uss/test_release/compare/v1.2.0...v1.3.0) (2025-01-24)
 
 
