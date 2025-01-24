@@ -1,9 +1,9 @@
 {
-    "branches": [
-        {
-            "branch": "main",
+    "packages": {
+        "build": {
+            
             "release-type": "node"
         }
-    ],
+    },
     "release-label": "release-please"
 }
