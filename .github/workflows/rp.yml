@@ -18,13 +18,18 @@ jobs:
     release-please:
       runs-on: ubuntu-latest
       steps:
-        # - uses: actions/checkout@v2
-
+        - uses: actions/checkout@v4
         - uses: googleapis/release-please-action@v4
           with:
             token: ${{ secrets.GITHUB_TOKEN }}
             config-file: release-please-config.json
             manifest-file: .release-please-manifest.json
+        
+        - name: Print release outputs for debugging
+          continue-on-error: true
+          run: |
+            echo "Release outputs:"
+            echo "${{ toJson(steps.release.outputs) }}"
 
         - name: Capture Output Variables
           id: capture-output
