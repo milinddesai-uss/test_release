@@ -26,36 +26,31 @@ jobs:
             # config-file: release-please-config.json
             # manifest-file: .release-please-manifest.json
         
-        - name: Print release outputs for debugging
-          continue-on-error: true
-          run: |
-            echo "Release outputs:"
-            echo "${{ toJson(steps.release.outputs) }}"
+        # - name: Print release outputs for debugging
+        #   continue-on-error: true
+        #   run: |
+        #     echo "Release outputs:"
+        #     echo "${{ toJson(steps.release.outputs) }}"
 
         - name: Capture Output Variables
           id: capture-output
           run: |
             echo "output<<EOF" >> $GITHUB_OUTPUT
-            echo "${{ steps.release-please.outputs }}" >> $GITHUB_OUTPUT
+            echo "${{ steps.release.outputs }}" >> $GITHUB_OUTPUT
             echo "EOF" >> $GITHUB_OUTPUT
     
-        - name: List Output Variables
-          run: |
-            echo "Captured Output Variables:"
-            echo "${{ steps.capture-output.outputs.output }}"
-
-        - name: Zip build folder
-          run: |
-            zip -r build.zip build/
-          shell: bash
+        # - name: Zip build folder
+        #   run: |
+        #     zip -r build.zip build/
+        #   shell: bash
 
         # - name: Upload build artifact
         #   uses: actions/upload-artifact@v2
         #   with:
         #     name: build
         #     path: build.zip
-        - name: Upload Release Artifact
-          # if: ${{ steps.release.outputs.release_created }}
-          env:
-           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          run: gh release upload ${{ steps.release.outputs.tag_name }} ./build/build.zip
+        # - name: Upload Release Artifact
+        #   # if: ${{ steps.release.outputs.release_created }}
+        #   env:
+        #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        #   run: gh release upload ${{ steps.release.outputs.tag_name }} ./build/build.zip
