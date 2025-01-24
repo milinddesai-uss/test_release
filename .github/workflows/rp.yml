@@ -1,28 +1,57 @@
-
 name: Release Please Test
 on:
     workflow_dispatch:
         inputs:
             environment:
                 description: 'Deployment environment'
-                # required: true
-                default: DEV
+                required: true
                 type: choice
+                default: DEV
                 options:
                 - DEV
                 - QA
 permissions:
     contents: write
-    issues: write
     pull-requests: write
-    # workflows: write
 
 jobs:
     release-please:
       runs-on: ubuntu-latest
       steps:
+        - uses: actions/checkout@v4
         - uses: googleapis/release-please-action@v4
           with:
             token: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
-            release-type: node
-            # path: build
+            config-file: release-please-config.json
+            manifest-file: .release-please-manifest.json
+        
+        - name: Print release outputs for debugging
+          continue-on-error: true
+          run: |
+            echo "Release outputs:"
+            echo "${{ toJson(steps.release.outputs) }}"
+
+        - name: Capture Output Variables
+          id: capture-output
+          continue-on-error: true
+          run: |
+            echo "output<<EOF" >> $GITHUB_OUTPUT
+            echo "${{ steps.release.outputs }}" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+    
+
+        - name: Zip build folder
+          run: |
+            zip -r build.zip build/
+          shell: bash
+
+        # - name: Upload build artifact
+        #   uses: actions/upload-artifact@v2
+        #   with:
+        #     name: build
+        #     path: build.zip
+        - name: Upload Release Artifact
+          # if: ${{ steps.release.outputs.release_created }}
+          env:
+           GITHUB_TOKEN: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
+          run: gh release upload ${{ steps.release.outputs.tag_name }} ./build/build.zip
