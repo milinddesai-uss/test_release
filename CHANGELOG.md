@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/milinddesai-uss/test_release/compare/v1.2.0...v1.3.0) (2025-01-24)
+
+
+### Features
+
+* more changes to the workflow file ([120b38e](https://github.com/milinddesai-uss/test_release/commit/120b38ed77ad992c2f5852b1efdcbdf6b5e02243))
+
 ## [1.2.0](https://github.com/milinddesai-uss/test_release/compare/v1.1.0...v1.2.0) (2025-01-24)
 
 
