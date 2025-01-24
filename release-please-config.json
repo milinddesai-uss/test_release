@@ -1,7 +1,6 @@
 {
     "packages": {
-        "build": {
-            
+        "build": {  
             "release-type": "node"
         }
     },
