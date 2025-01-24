@@ -1,0 +1,15 @@
+{
+  "name": "test_release",
+  "version": "1.0.0",
+  "description": "testing for semantic versioning",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "build": "node ./src/build.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "archiver": "^7.0.1"
+  }
+}
