@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/milinddesai-uss/test_release/compare/v1.0.0...v1.1.0) (2025-01-24)
+
+
+### Features
+
+* **web:** Add config ([f7662bb](https://github.com/milinddesai-uss/test_release/commit/f7662bb67e15e35da85af7bf2e499fafee1493a6))
+
 ## 1.0.0 (2025-01-24)
 
 
