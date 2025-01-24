@@ -22,8 +22,9 @@ jobs:
         - uses: googleapis/release-please-action@v4
           with:
             token: ${{ secrets.GITHUB_TOKEN }}
-            config-file: release-please-config.json
-            manifest-file: .release-please-manifest.json
+            release-type: node
+            # config-file: release-please-config.json
+            # manifest-file: .release-please-manifest.json
         
         - name: Print release outputs for debugging
           continue-on-error: true
