@@ -34,14 +34,19 @@ jobs:
             echo "output<<EOF" >> $GITHUB_OUTPUT
             echo "${{ steps.release.outputs }}" >> $GITHUB_OUTPUT
             echo "EOF" >> $GITHUB_OUTPUT
+
+        - name: List files and folders
+          run: |
+            echo "Listing all files and folders in the current working directory:"
+            ls -la
     
 
         - name: Zip build folder
           continue-on-error: true
           run: |
-            zip -r build.zip build/
-          working-directory: build
-          shell: bash
+            zip -r build.zip . -i build/
+          # working-directory: build
+          # shell: bash
 
         # - name: Upload build artifact
         #   uses: actions/upload-artifact@v2
@@ -49,6 +54,7 @@ jobs:
         #     name: build
         #     path: build.zip
         - name: Upload Release Artifact
+          continue-on-error: true
           # if: ${{ steps.release.outputs.release_created }}
           env:
            GITHUB_TOKEN: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
