@@ -2,7 +2,7 @@ name: Main Release
 on:
     push:
       branches:
-        - main
+        - 'releases/**'
 jobs:
     release-please:
       runs-on: ubuntu-latest
@@ -36,9 +36,10 @@ jobs:
     
 
         - name: Zip build folder
+          continue-on-error: true
           run: |
-            zip -r build.zip . -i build
-          # shell: bash
+            zip -r build.zip build/
+          shell: bash
 
         # - name: Upload build artifact
         #   uses: actions/upload-artifact@v2
