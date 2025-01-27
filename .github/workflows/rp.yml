@@ -19,10 +19,20 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
+          # these if statements ensure that a publication only occurs when
+          # a new release is created:
+          # if: ${{ steps.release.outputs.release_created }}
+
         - uses: googleapis/release-please-action@v4
+          id: release
           with:
             token: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
+            # config-file: release-please-config.json
+            # manifest-file: .release-please-manifest.json
             release-type: node
+            target-branch: 'release/**'
+        # The logic below handles the npm publication:
+
         
         - name: Print release outputs for debugging
           continue-on-error: true
@@ -37,12 +47,19 @@ jobs:
             echo "output<<EOF" >> $GITHUB_OUTPUT
             echo "${{ steps.release.outputs }}" >> $GITHUB_OUTPUT
             echo "EOF" >> $GITHUB_OUTPUT
+
+        - name: List files and folders
+          run: |
+            echo "Listing all files and folders in the current working directory:"
+            ls -la
     
 
         - name: Zip build folder
+          continue-on-error: true
           run: |
-            zip -r build.zip build/
-          shell: bash
+            zip -r build.zip . -i build/
+          # working-directory: build
+          # shell: bash
 
         # - name: Upload build artifact
         #   uses: actions/upload-artifact@v2
@@ -50,6 +67,7 @@ jobs:
         #     name: build
         #     path: build.zip
         - name: Upload Release Artifact
+          continue-on-error: true
           # if: ${{ steps.release.outputs.release_created }}
           env:
            GITHUB_TOKEN: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
