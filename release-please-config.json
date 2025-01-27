@@ -1,8 +1,11 @@
 {
-    "branches": [
-        {
-            "branch": "main",
+    "include-v-in-tag": true,
+    "tag-separator": "@",
+    "always-link-local": true,
+    "packages":{
+        ".": {
             "release-type": "node"
+
         }
-    ]
+    }
 }
