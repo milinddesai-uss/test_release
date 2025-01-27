@@ -6,7 +6,6 @@
         ".": {
             "release-type": "node",
             "target-branch": "release/v1.25.2"
-        }
 
         }
     }
