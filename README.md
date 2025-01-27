@@ -5,3 +5,4 @@ Testing for Semantic Versioning
 - New Release condition
 - Change branch conditon name to -release from releases
 - config changes
+- Changed only to release branch, added default in release-please
