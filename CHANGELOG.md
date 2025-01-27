@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.6.0](https://github.com/milinddesai-uss/test_release/compare/v1.5.0...v1.6.0) (2025-01-27)
+
+
+### Features
+
+* Change branch conditon name to -release from releases ([ab55f57](https://github.com/milinddesai-uss/test_release/commit/ab55f5746f6ceffe63ba0c65dcdb8a846e961972))
+* Create a new merge request now ([1e77fdd](https://github.com/milinddesai-uss/test_release/commit/1e77fdde67af6207834e136b4102d68bee3a14ee))
+* dynamic release branch ([c5e8bfe](https://github.com/milinddesai-uss/test_release/commit/c5e8bfebf5a67db6fef1b4b74bad833d92ae4cc7))
+* New main change to release please ([0982b9d](https://github.com/milinddesai-uss/test_release/commit/0982b9deb074f3ab57493b7807ffda74978d9b38))
+* new release ([fc41964](https://github.com/milinddesai-uss/test_release/commit/fc4196409952e3533132b61e447f943f64d9ea18))
+* Pull Request on Release Branch ([ca76e80](https://github.com/milinddesai-uss/test_release/commit/ca76e80085c217ff9bbbab8f7190b06916582c2a))
+* update package configuration ([2534b6a](https://github.com/milinddesai-uss/test_release/commit/2534b6a633d588779a7749db2793fbc88876917b))
+* Update Zip Code ([527c554](https://github.com/milinddesai-uss/test_release/commit/527c5545aca33f6c4d1543888107bb432535a9aa))
+
 ## [1.5.0](https://github.com/milinddesai-uss/test_release/compare/v1.4.0...v1.5.0) (2025-01-24)
 
 
