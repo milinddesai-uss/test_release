@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/milinddesai-uss/test_release/compare/v1.6.0...v1.7.0) (2025-01-27)
+
+
+### Features
+
+* run only for release ([b886981](https://github.com/milinddesai-uss/test_release/commit/b88698108c3a1f35e30af42305ac9ceabbc11d33))
+
 ## [1.6.0](https://github.com/milinddesai-uss/test_release/compare/v1.5.0...v1.6.0) (2025-01-27)
 
 
