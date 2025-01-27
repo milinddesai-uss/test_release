@@ -4,7 +4,9 @@
     "always-link-local": true,
     "packages":{
         ".": {
-            "release-type": "node"
+            "release-type": "node",
+            "target-branch": "release/v1.25.2"
+        }
 
         }
     }
