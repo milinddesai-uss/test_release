@@ -30,7 +30,7 @@ jobs:
             # config-file: release-please-config.json
             # manifest-file: .release-please-manifest.json
             release-type: node
-            target-branch: 'release/**'
+            target-branch: ${{ github.ref_name }}
         # The logic below handles the npm publication:
 
         
